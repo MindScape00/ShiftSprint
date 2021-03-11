@@ -1,0 +1,13 @@
+## Interface: 80300
+## Title: |cffFF55DDShiftSprint
+## Author: MindScape
+## Version: 2.3.1
+## Notes: Enables Sprinting via the Left Shift Key. Sprint Speeds may be customized via commands, optional spell casting and emotes also. (/ss)
+## DefaultState: Enabled
+## SavedVariablesPerCharacter: SprintSpeedWalk, SprintSpeedFly, SprintSpeedSwim, sendEmote, emoteMessage, spellList, spellEnabled, ssRunOnce, sendSpells
+## X-Date: September 7th, 2017
+## X-Website: https://forums.epsilonwow.net/topic/239-convenient-commands-shiftsprint/
+## X-Credits: MindScape
+## X-Changes: TOC Bump
+
+ShiftSprint.lua

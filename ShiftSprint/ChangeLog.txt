@@ -1,1 +1,55 @@
-test
+v2.3.1 (Dec. 11, 2017)
+	- Add in ability for ShiftSprint to handle swimming (/ss swim # to set it)
+	- Changed from '.cast' to '.aura # self' for the casting of spells. This will stop spells being placed on target instead of yourself.
+	- Changed the 'return' speed handling - it will now try and save your previous set speed to return you to, instead of just returning you to speed 1.
+		- Note: This will fail if you spam your sprint in rapid succession, as it's set instantly when hitting the sprint button - if you hit it while the server is still processing changing your speed back from a previous sprint, it will adopt those numbers and put you in eternal sprint speed - unless you change it back with ".mod speed" again. This may change in the future if we get proper API from the server and begin monitoring chat for when you actually set your speed, but that may be awhile.
+	
+----------------------------------------
+	
+v2.2.1 (Aug. 3, 2017)
+	- Added in a check to remove default binding that conflicted with Sprint-Jumping.
+	- Added in warnings if you have alternate bindings conflicting, but didn't auto remove them. (May not actually work completely?)
+	- Added in "/ssjumpreset" to remove any conflicting bindings automatically.
+	
+----------------------------------------
+
+v2.2.0 (July 31, 2017)
+	- Changed spell system (ShiftSpells)
+		- Condensed into a single /command (/sspell)
+			- Now accepts "all/walk/fly/off" to set the setting instead of an entirely separate command
+			- Now accepts "list" as an argument to list out current spells
+		- Remade Spell Setting, can now simply add to current list, or set a new list.
+			- i.e., '/sspell add 12345' will add spell 12345 ontop of the current set spells.
+				- '/sspell set 12345' will remove all other spells and only do spell 12345.
+		- Fixed Spells not disabling in certain situations if you use "On-Foot Only" or "Fly-Only" settings.
+	- Fixed Chat Filter on Mod Speed messages to only be active while sprinting / stopping sprinting.
+	- Localized all variables to increase compatibility with other ConvenientCommand addons.
+	- Fixed commands if you use capitals (oversight).
+	
+----------------------------------------
+
+v2.1.1 (July 27, 2017)
+	- Hotfix (Broke something no one prolly woulda noticed, but oh well)
+
+----------------------------------------
+
+v2.1.0 (July 25, 2017)
+	- No longer activates if you are standing still, must be moving first and then hold shift to begin sprinting
+		- Avoids outputting /me's if you're standing still not meaning to sprint
+		- Avoids casting your spells if you're standing still not meaning to sprint
+		- Fixes it so it doesn't activate in most menus and such, since you most likely won't be moving
+
+----------------------------------------
+
+v2.0.0 (July 25, 2017)
+	- Introduced Spell System
+		- /sspell [Spell IDs] allows you to set spells that cast when you begin sprinting.
+		- /sspells - Lists all current spells you have set to cast when you begin sprinting.
+		- /sspells [0-3] - Switch settings so that you can turn ShiftSpells Off (0), Both Walk & Fly (1), Just Walk (2), Just Fly (3).
+	- Spells cast on sprint unaura when done sprinting
+	- Updated handling of KeyDown recognition
+
+----------------------------------------
+
+v1.0.0 (July 24, 2017)
+	- Release
