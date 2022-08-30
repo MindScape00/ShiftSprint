@@ -4,3 +4,6 @@ A WoW Addon for the Enteleiae core-based command system to allow sprinting when 
 # Installation
 Make sure WoW is closed. Drag the "ShiftSprint" folder to your Epsilon/\_retail_/Interface/Addons/ folder.
 Launch the game and login. In bottom left of Character Select, click "Addons" and then ensure ShiftSprint is enabled.
+
+## Permissions
+You may not modify or redistribute the addon in any form without written expressed permission.
